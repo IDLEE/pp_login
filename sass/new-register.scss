@@ -1,0 +1,156 @@
+@import "base";
+$smsBtnBg:#e8f5ff;
+$smsBtnBorderColor:#80c6ff;
+a{
+  color: $primary;
+}
+.container{
+  font-size: .35rem;
+}
+.new-form-control{
+  margin-bottom: .5rem;
+  background-color: #fff;
+  position: relative;
+  border-radius: .2rem;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  overflow: hidden;
+  border: 1px solid $gray;
+  @include transition(all .3s ease);
+  &.no-label{
+    padding-left: 0;
+  }
+  label{
+    display: block;
+    width: .3rem;
+  }
+  .iconfont{
+    font-size: .8rem;
+    left: .3rem;
+    color: $dark-gray;
+    @include v-center();
+  }
+  input{
+    display: block;
+    width: 100%;
+    font-size: .5rem;
+    padding: .35rem 0 .45rem .3rem;
+    border-radius: .2rem;
+    outline: none;
+    border: none;
+  }
+  &.has-error{
+    .iconfont{
+      color: $danger;
+      @include transition(all .3s ease);
+    }
+    border-color: $danger;
+  }
+}
+.btn-group{
+  .col-7{
+    width: 52%;
+  }
+  [class^="col-"]:nth-child(2) {
+    float: right;
+  }
+
+  .n-btn{
+    background-color: $smsBtnBg;
+    border: 1px solid $smsBtnBorderColor;
+    color: #6abcff;
+    padding: .4rem .3rem;
+    &:disabled {
+      border-color: $placeholderColor;
+      color: $placeholderColor;
+      background: #fff;
+    }
+  }
+}
+.header{
+  color: #fff;
+  padding: .35rem 0;
+  text-align: center;
+  font-size: .5rem;
+  background-color: $primary;
+  position: relative;
+  a{
+    width: 1.5rem;
+    height: 100%;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    left: 0;
+    top:0;
+    .iconfont{
+      @include  both-center();
+      font-size: .5rem;
+    }
+    &:active{
+      background: $activebg;
+    }
+  }
+}
+.recommend-wrap{
+  font-size: .4rem;
+  margin: .4rem 0;
+  height: .8rem;
+  overflow: hidden;
+  color: $dark-gray;
+  @include transition(all .3s linear);
+  a{
+    color: $dark-gray;
+  }
+  &.open{
+    min-height: 3rem;
+    @include transition(all .3s linear);
+  }
+}
+.txt-gray{
+  color: $dark-gray;
+}
+.txt-warning{
+  color: $warning;
+}
+.t-a-c{
+  text-align: center;
+}
+[data-validate]{
+  display: none;
+  margin-bottom: .2rem;
+  font-size: .3rem;
+  color: $danger !important;
+  text-align: left !important;
+}
+
+.success-wrap{
+  position: relative;
+  margin: 1.5rem 0 1.3rem 0;
+  padding-top: 3.5rem;
+  text-align: center;
+  .title{
+    color: #6e6e47;
+    font-size: .5rem;
+    font-weight: normal;
+  }
+  p{
+    margin-top: 1rem;
+    font-size: .4rem;
+    color: $dark-gray;
+    .txt-warning{
+      font-size: 1.2em;
+      margin: .05rem;
+    }
+  }
+  &:before{
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 3rem;
+    @include h-center();
+    top:0;
+    background: url("../img/hand.png") no-repeat;
+    @include background-size(100% auto);
+  }
+}

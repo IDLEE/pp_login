@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>PPmoney万惠理财</title>
+    <link rel="stylesheet" href="./css/new-register.css">
+    <script src="./js/zepto.min.js"></script>
+    <script src="./js/base.js"></script>
+    <script>
+        //重置font-size
+        (function(){
+            var _w = $(document).width();
+            if(_w>=750){
+                _w = 750;
+            }
+            $("html").css("font-size",100/1080*_w);
+            window.onresize = function(){
+                _w = $(document).width();
+                if(_w>=750){
+                    _w = 750;
+                }
+                $("html").css("font-size",100/1080*_w);
+            }
+        })();
+    </script>
+</head>
+<body>
+<div class="page page-current success-page">
+    <div class="header">
+        <a href="#" class=""><span class="iconfont icon-home"></span></a>
+        注册
+    </div>
+    <div class="success-wrap">
+        <h3 class="title">注册成功！</h3>
+        <p id="phone-txt">您已成功领取<span class="txt-warning">588元</span>现金礼包</p>
+    </div>
+    <div class="w-80">
+        <button id="download-btn" class="btn btn-block btn-warning">马上使用</button>
+    </div>
+</div>
+
+</body>
+</html>
